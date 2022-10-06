@@ -45,10 +45,10 @@
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/slicknav.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/style.css');
 
-
     $APPLICATION->ShowHead();
     ?>
-    <link rel="shortcut icon" type="image/x-icon" href="<?=SITE_TEMPLATE_PATH?>img/favicon.png">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Philosopher:400,400i,700,700i|Poppins:200,200i,300,300i,400,400i,500,600,700,800,900&display=swap"/>
+    <link rel="shortcut icon" type="image/x-icon" href="<?=SITE_TEMPLATE_PATH?>/img/favicon.png">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title><? $APPLICATION->ShowTitle() ?></title>
 </head>
@@ -58,6 +58,53 @@
 $APPLICATION->ShowPanel();
 ?>
 
+<!-- header-start -->
+<header>
+    <div class="header-area ">
+        <div id="sticky-header" class="main-header-area">
+            <div class="container-fluid p-0">
+                <div class="header_bottom_border">
+                    <div class="row align-items-center no-gutters">
+                        <div class="col-xl-3 col-lg-2">
+                            <div class="logo">
+                                <a href="/">
+                                    <img src="<?=SITE_TEMPLATE_PATH?>/img/logo.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-7">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a class="active" href="index.html">Главная</a></li>
+                                        <li><a href="catalog/index.html">Меню</a></li>
+                                        <li><a href="#">О ресторане <i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="about.html">О нас</a></li>
+                                                <li><a href="contact.html">Контакты</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="reviews/index.html">Отзывы</a></li>
+                                        <li><a href="events/index.html">Мероприятия</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                            <div class="say_hello">
+                                <a href="events/index.html">Наши мероприятия</a>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
 
+            </div>
+        </div>
+    </div>
+</header>
+<!-- header-end -->
 
 
