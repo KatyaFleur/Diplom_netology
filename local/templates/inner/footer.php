@@ -7,7 +7,7 @@
                 <div class="col-xl-3 col-md-6 col-lg-3 ">
                     <div class="footer_widget">
                         <div class="footer_logo">
-                            <a href="index.html">
+                            <a href="/">
                                 <img src="<?=SITE_TEMPLATE_PATH?>/img/footer_logo.png" alt="">
                             </a>
                         </div>
@@ -48,10 +48,10 @@
                             Полезные ссылки
                         </h3>
                         <ul>
-                            <li><a href="catalog/index.html">Меню</a></li>
-                            <li><a href="about.html">О нас</a></li>
-                            <li><a href="reviews/index.html">Отзывы</a></li>
-                            <li><a href="events/index.html">Мероприятия</a></li>
+                            <li><a href="/catalog/">Меню</a></li>
+                            <li><a href="/about/index.php">О нас</a></li>
+                            <li><a href="/reviews/">Отзывы</a></li>
+                            <li><a href="/events/">Мероприятия</a></li>
                         </ul>
                     </div>
                 </div>

@@ -56,29 +56,29 @@ $APPLICATION->SetTitle('Ресторан "Морская кухня"');
             </div>
         </div>
         <div class="single_gallery big_img">
-            <a class="popup-image" href="img/gallery/1.png"></a>
-            <img src="img/gallery/1.png" alt="">
+            <a class="popup-image" href="<?=SITE_TEMPLATE_PATH?>/img/gallery/1.png"></a>
+            <img src="<?=SITE_TEMPLATE_PATH?>/img/gallery/1.png" alt="">
         </div>
         <div class="single_gallery small_img">
-            <a class="popup-image" href="img/gallery/2.png"></a>
-            <img src="img/gallery/2.png" alt="">
+            <a class="popup-image" href="<?=SITE_TEMPLATE_PATH?>/img/gallery/2.png"></a>
+            <img src="<?=SITE_TEMPLATE_PATH?>/img/gallery/2.png" alt="">
         </div>
         <div class="single_gallery small_img">
-            <a class="popup-image" href="img/gallery/3.png"></a>
-            <img src="img/gallery/3.png" alt="">
+            <a class="popup-image" href="<?=SITE_TEMPLATE_PATH?>/img/gallery/3.png"></a>
+            <img src="<?=SITE_TEMPLATE_PATH?>/img/gallery/3.png" alt="">
         </div>
 
         <div class="single_gallery small_img">
-            <a class="popup-image" href="img/gallery/4.png"></a>
-            <img src="img/gallery/4.png" alt="">
+            <a class="popup-image" href="<?=SITE_TEMPLATE_PATH?>/img/gallery/4.png"></a>
+            <img src="<?=SITE_TEMPLATE_PATH?>/img/gallery/4.png" alt="">
         </div>
         <div class="single_gallery small_img">
-            <a class="popup-image" href="img/gallery/5.png"></a>
-            <img src="img/gallery/5.png" alt="">
+            <a class="popup-image" href="<?=SITE_TEMPLATE_PATH?>/img/gallery/5.png"></a>
+            <img src="<?=SITE_TEMPLATE_PATH?>/img/gallery/5.png" alt="">
         </div>
         <div class="single_gallery big_img">
-            <a class="popup-image" href="img/gallery/6.png"></a>
-            <img src="img/gallery/6.png" alt="">
+            <a class="popup-image" href="<?=SITE_TEMPLATE_PATH?>/img/gallery/6.png"></a>
+            <img src="<?=SITE_TEMPLATE_PATH?>/img/gallery/6.png" alt="">
         </div>
     </div>
 
@@ -94,46 +94,74 @@ $APPLICATION->SetTitle('Ресторан "Морская кухня"');
                     </div>
                 </div>
             </div>
-            <div class="section-top-border">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="single-defination">
-                            <h4 class="mb-20">Мероприятие 01</h4>
-                            <p>Recently, the US Federal government banned online casinos from operating in America by
-                                making it illegal to
-                                transfer money to them through any US bank or payment system. As a result of this law,
-                                most of the popular
-                                online casino networks</p>
-                            <a href="events/events_detail.html" class="genric-btn default">Подробнее</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="single-defination">
-                            <h4 class="mb-20">Мероприятие 02</h4>
-                            <p>Recently, the US Federal government banned online casinos from operating in America by
-                                making it illegal to
-                                transfer money to them through any US bank or payment system. As a result of this law,
-                                most of the popular
-                                online casino networks</p>
-                            <a href="events/events_detail.html" class="genric-btn default">Подробнее</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="single-defination">
-                            <h4 class="mb-20">Мероприятие 03</h4>
-                            <p>Recently, the US Federal government banned online casinos from operating in America by
-                                making it illegal to
-                                transfer money to them through any US bank or payment system. As a result of this law,
-                                most of the popular
-                                online casino networks</p>
-                            <a href="events/events_detail.html" class="genric-btn default">Подробнее</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- / Мероприятия -->
+            <?$APPLICATION->IncludeComponent(
+	"bitrix:news.list", 
+	"index_meropriyatiya", 
+	array(
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"ADD_SECTIONS_CHAIN" => "Y",
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"CACHE_FILTER" => "N",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "36000000",
+		"CACHE_TYPE" => "A",
+		"CHECK_DATES" => "Y",
+		"DETAIL_URL" => "",
+		"DISPLAY_BOTTOM_PAGER" => "Y",
+		"DISPLAY_DATE" => "Y",
+		"DISPLAY_NAME" => "Y",
+		"DISPLAY_PICTURE" => "Y",
+		"DISPLAY_PREVIEW_TEXT" => "Y",
+		"DISPLAY_TOP_PAGER" => "N",
+		"FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"FILTER_NAME" => "",
+		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+		"IBLOCK_ID" => "5",
+		"IBLOCK_TYPE" => "-",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+		"INCLUDE_SUBSECTIONS" => "Y",
+		"MESSAGE_404" => "",
+		"NEWS_COUNT" => "20",
+		"PAGER_BASE_LINK_ENABLE" => "N",
+		"PAGER_DESC_NUMBERING" => "N",
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+		"PAGER_SHOW_ALL" => "N",
+		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_TEMPLATE" => ".default",
+		"PAGER_TITLE" => "Новости",
+		"PARENT_SECTION" => "",
+		"PARENT_SECTION_CODE" => "",
+		"PREVIEW_TRUNCATE_LEN" => "",
+		"PROPERTY_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"SET_BROWSER_TITLE" => "N",
+		"SET_LAST_MODIFIED" => "N",
+		"SET_META_DESCRIPTION" => "N",
+		"SET_META_KEYWORDS" => "N",
+		"SET_STATUS_404" => "N",
+		"SET_TITLE" => "N",
+		"SHOW_404" => "N",
+		"SORT_BY1" => "ACTIVE_FROM",
+		"SORT_BY2" => "SORT",
+		"SORT_ORDER1" => "DESC",
+		"SORT_ORDER2" => "ASC",
+		"STRICT_SECTION_CHECK" => "N",
+		"COMPONENT_TEMPLATE" => "index_meropriyatiya",
+		"COMPOSITE_FRAME_MODE" => "A",
+		"COMPOSITE_FRAME_TYPE" => "AUTO"
+	),
+	false
+);?><br>
+
     <!-- testimonial_area  -->
     <div class="testimonial_area overlay ">
         <div class="container">
@@ -145,133 +173,74 @@ $APPLICATION->SetTitle('Ресторан "Морская кухня"');
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="testmonial_active owl-carousel">
-                        <div class="single_carousel">
-                            <div class="single_testmonial ">
-                                <div class="author_opinion">
-                                    <p>“Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor
-                                        sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices nec sed
-                                        neque.</p>
-                                </div>
-                                <div class="testmonial_author">
-                                    <div class="thumb">
-                                        <img src="img/testimonial/author.png" alt="">
-                                    </div>
-                                    <div class="name">
-                                        <h3>Robert Thomson</h3>
-                                        <div class="icon">
-                                            <a href="#"><i class="fa fa-star"></i> </a>
-                                            <a href="#"><i class="fa fa-star"></i> </a>
-                                            <a href="#"><i class="fa fa-star"></i> </a>
-                                            <a href="#"><i class="fa fa-star"></i> </a>
-                                            <a href="#"><i class="fa fa-star"></i> </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+<?$APPLICATION->IncludeComponent(
+	"bitrix:news.list", 
+	"index_otziv", 
+	array(
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"ADD_SECTIONS_CHAIN" => "Y",
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"CACHE_FILTER" => "N",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "36000000",
+		"CACHE_TYPE" => "A",
+		"CHECK_DATES" => "Y",
+		"DETAIL_URL" => "",
+		"DISPLAY_BOTTOM_PAGER" => "Y",
+		"DISPLAY_DATE" => "Y",
+		"DISPLAY_NAME" => "Y",
+		"DISPLAY_PICTURE" => "Y",
+		"DISPLAY_PREVIEW_TEXT" => "Y",
+		"DISPLAY_TOP_PAGER" => "N",
+		"FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"FILTER_NAME" => "",
+		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+		"IBLOCK_ID" => "4",
+		"IBLOCK_TYPE" => "-",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+		"INCLUDE_SUBSECTIONS" => "Y",
+		"MESSAGE_404" => "",
+		"NEWS_COUNT" => "20",
+		"PAGER_BASE_LINK_ENABLE" => "N",
+		"PAGER_DESC_NUMBERING" => "N",
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+		"PAGER_SHOW_ALL" => "N",
+		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_TEMPLATE" => ".default",
+		"PAGER_TITLE" => "Новости",
+		"PARENT_SECTION" => "",
+		"PARENT_SECTION_CODE" => "",
+		"PREVIEW_TRUNCATE_LEN" => "",
+		"PROPERTY_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"SET_BROWSER_TITLE" => "N",
+		"SET_LAST_MODIFIED" => "N",
+		"SET_META_DESCRIPTION" => "N",
+		"SET_META_KEYWORDS" => "N",
+		"SET_STATUS_404" => "N",
+		"SET_TITLE" => "N",
+		"SHOW_404" => "N",
+		"SORT_BY1" => "ACTIVE_FROM",
+		"SORT_BY2" => "SORT",
+		"SORT_ORDER1" => "DESC",
+		"SORT_ORDER2" => "ASC",
+		"STRICT_SECTION_CHECK" => "N",
+		"COMPONENT_TEMPLATE" => "index_otziv",
+		"COMPOSITE_FRAME_MODE" => "A",
+		"COMPOSITE_FRAME_TYPE" => "AUTO"
+	),
+	false
+);?><br>
+   </div>
                         </div>
-                        <div class="single_carousel">
-                            <div class="single_testmonial ">
-                                <div class="author_opinion">
-                                    <p>“Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor
-                                        sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices nec sed
-                                        neque.</p>
-                                </div>
-                                <div class="testmonial_author">
-                                    <div class="thumb">
-                                        <img src="img/testimonial/author2.png" alt="">
-                                    </div>
-                                    <div class="name">
-                                        <h3>Kristiana Chouhan</h3>
-                                        <div class="icon">
-                                            <a href="#"><i class="fa fa-star"></i> </a>
-                                            <a href="#"><i class="fa fa-star"></i> </a>
-                                            <a href="#"><i class="fa fa-star"></i> </a>
-                                            <a href="#"><i class="fa fa-star"></i> </a>
-                                            <a href="#"><i class="fa fa-star"></i> </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single_carousel">
-                            <div class="single_testmonial ">
-                                <div class="author_opinion">
-                                    <p>“Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor
-                                        sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices nec sed
-                                        neque.</p>
-                                </div>
-                                <div class="testmonial_author">
-                                    <div class="thumb">
-                                        <img src="img/testimonial/author2.png" alt="">
-                                    </div>
-                                    <div class="name">
-                                        <h3>Kristiana Chouhan</h3>
-                                        <div class="icon">
-                                            <a href="#"><i class="fa fa-star"></i> </a>
-                                            <a href="#"><i class="fa fa-star"></i> </a>
-                                            <a href="#"><i class="fa fa-star"></i> </a>
-                                            <a href="#"><i class="fa fa-star"></i> </a>
-                                            <a href="#"><i class="fa fa-star"></i> </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single_carousel">
-                            <div class="single_testmonial ">
-                                <div class="author_opinion">
-                                    <p>“Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor
-                                        sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices nec sed
-                                        neque.</p>
-                                </div>
-                                <div class="testmonial_author">
-                                    <div class="thumb">
-                                        <img src="img/testimonial/author.png" alt="">
-                                    </div>
-                                    <div class="name">
-                                        <h3>Robert Thomson</h3>
-                                        <div class="icon">
-                                            <a href="#"><i class="fa fa-star"></i> </a>
-                                            <a href="#"><i class="fa fa-star"></i> </a>
-                                            <a href="#"><i class="fa fa-star"></i> </a>
-                                            <a href="#"><i class="fa fa-star"></i> </a>
-                                            <a href="#"><i class="fa fa-star"></i> </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single_carousel">
-                            <div class="single_testmonial ">
-                                <div class="author_opinion">
-                                    <p>“Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor
-                                        sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices nec sed
-                                        neque.</p>
-                                </div>
-                                <div class="testmonial_author">
-                                    <div class="thumb">
-                                        <img src="img/testimonial/author2.png" alt="">
-                                    </div>
-                                    <div class="name">
-                                        <h3>Kristiana Chouhan</h3>
-                                        <div class="icon">
-                                            <a href="#"><i class="fa fa-star"></i> </a>
-                                            <a href="#"><i class="fa fa-star"></i> </a>
-                                            <a href="#"><i class="fa fa-star"></i> </a>
-                                            <a href="#"><i class="fa fa-star"></i> </a>
-                                            <a href="#"><i class="fa fa-star"></i> </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /testimonial_area  -->
+
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

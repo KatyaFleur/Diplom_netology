@@ -74,20 +74,16 @@ $APPLICATION->ShowPanel();
                         </div>
                         <div class="col-xl-6 col-lg-7">
                             <div class="main-menu  d-none d-lg-block">
-                                <nav>
-                                    <ul id="navigation">
-                                        <li><a class="active" href="../index.html">Главная</a></li>
-                                        <li><a href="../catalog/index.html">Меню</a></li>
-                                        <li><a href="#">О ресторане <i class="ti-angle-down"></i></a>
-                                            <ul class="submenu">
-                                                <li><a href="../about.html">О нас</a></li>
-                                                <li><a href="../contact.html">Контакты</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="../reviews/index.html">Отзывы</a></li>
-                                        <li><a href="../events/index.html">Мероприятия</a></li>
-                                    </ul>
-                                </nav>
+                                <?$APPLICATION->IncludeComponent(
+                                    "bitrix:main.include",
+                                    "",
+                                    Array(
+                                        "AREA_FILE_SHOW" => "file",
+                                        "AREA_FILE_SUFFIX" => "inc",
+                                        "EDIT_TEMPLATE" => "",
+                                        "PATH" => "/include/menu.php"
+                                    )
+                                );?>
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-3 d-none d-lg-block">
