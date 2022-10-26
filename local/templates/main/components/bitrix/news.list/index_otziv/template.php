@@ -28,8 +28,8 @@ $this->setFrameMode(true);
                                 </div>
                                 <div class="testmonial_author">
                                     <div class="thumb">
-                                      <!--  <img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="">   -->
-										<img src="<?=SITE_TEMPLATE_PATH?>/img/testimonial/author.png" alt=""> 
+                                      <img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" class= "author-img" alt="">
+
                                     </div>
                                     <div class="name">
                                         <h3><?=$arItem['DISPLAY_PROPERTIES']['AUTHOR']['DISPLAY_VALUE'];?></h3>

@@ -45,10 +45,10 @@ $this->setFrameMode(true);
                     <div class="col-lg-6">
                         <div class="about_img">
                             <div class="img_1">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/about/big.png" alt="">rr
+                                <img src="<?=$arResult["PREVIEW_PICTURE"]["SRC"]?>" alt="">
                             </div>
                             <div class="small_img">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/about/small.png" alt="">
+                                <img src="<?=$arResult["DETAIL_PICTURE"]["SRC"]?>" alt="">
                             </div>
                         </div>
                     </div>

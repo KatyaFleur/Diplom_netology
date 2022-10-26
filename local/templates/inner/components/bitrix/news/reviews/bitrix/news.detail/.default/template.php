@@ -23,7 +23,7 @@ $this->setFrameMode(true);
                      <h2><?=$arResult["NAME"]?>
                      </h2>
                      <ul class="blog-info-link mt-3 mb-4">
-                        <li><a href="#"><i class="fa fa-user"></i> Сергей Петров</a></li>
+                        <li><a href="#"><i class="fa fa-user"></i><?echo $arResult['DISPLAY_PROPERTIES']['AUTHOR']['DISPLAY_VALUE'];?></a></li>
                         <li><a href="#"><i class="fa fa-date"></i><?=$arResult["DISPLAY_ACTIVE_FROM"]?></a></li>
                      </ul>
                      <p class="excert">

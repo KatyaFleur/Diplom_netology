@@ -10,3 +10,12 @@ div.news-list img.preview_picture
 .news-date-time {
 	color:#486DAA;
 }
+
+.author-img {
+	max-width: 70px;
+	height: 70px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	float: left;
+}

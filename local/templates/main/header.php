@@ -1,6 +1,10 @@
 <? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();?>
 <!doctype html>
-<html lang="ru">
+<?
+use Bitrix\Main\Localization\Loc;
+
+Loc::loadLanguageFile(__FILE__);
+?>
 <head>
     <?
 
