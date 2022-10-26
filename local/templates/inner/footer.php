@@ -47,25 +47,41 @@
                         <h3 class="footer_title">
                             Полезные ссылки
                         </h3>
-                        <ul>
-                            <li><a href="/catalog/">Меню</a></li>
-                            <li><a href="/about/index.php">О нас</a></li>
-                            <li><a href="/reviews/">Отзывы</a></li>
-                            <li><a href="/events/">Мероприятия</a></li>
-                        </ul>
+                        <?$APPLICATION->IncludeComponent(
+	"bitrix:menu", 
+	"bottom_menu", 
+	array(
+		"ROOT_MENU_TYPE" => "bottom",
+		"MENU_CACHE_TYPE" => "A",
+		"MENU_CACHE_TIME" => "36000000",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"CACHE_SELECTED_ITEMS" => "N",
+		"MAX_LEVEL" => "1",
+		"USE_EXT" => "Y",
+		"DELAY" => "N",
+		"ALLOW_MULTI_SELECT" => "N",
+		"COMPONENT_TEMPLATE" => "bottom_menu",
+		"CHILD_MENU_TYPE" => "",
+		"COMPOSITE_FRAME_MODE" => "A",
+		"COMPOSITE_FRAME_TYPE" => "AUTO"
+	),
+	false
+);?>
                     </div>
                 </div>
                 <div class="col-xl-4 col-md-6 col-lg-4">
-                    <div class="footer_widget">
-                        <h3 class="footer_title">
-                            Поиск
-                        </h3>
-                        <form action="/search/" class="newsletter_form">
-                            <input type="text" placeholder="Поиск по сайту">
-                            <button type="submit">Найти</button>
-                        </form>
-                        <p class="newsletter_text">Найдется всё, что нужно.</p>
-                    </div>
+                    <?$APPLICATION->IncludeComponent(
+                        "bitrix:main.include",
+                        "",
+                        Array(
+                            "AREA_FILE_SHOW" => "file",
+                            "AREA_FILE_SUFFIX" => "inc",
+                            "EDIT_TEMPLATE" => "",
+                            "PATH" => "/include/search.php"
+                        )
+                    );?>
                 </div>
             </div>
         </div>
